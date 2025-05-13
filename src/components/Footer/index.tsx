@@ -12,14 +12,14 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
                   <Image
-                    src="/images/logo/logo-2.svg"
+                    src="/images/logo/letter-k-logo-design-template-concept-with-fashion-wing-concept-vector.jpg"
                     alt="logo"
                     className="w-full dark:hidden"
                     width={140}
                     height={30}
                   />
                   <Image
-                    src="/images/logo/logo.svg"
+                    src="/images/logo/letter-k-logo-design-template-concept-with-fashion-wing-concept-vector.jpg"
                     alt="logo"
                     className="hidden w-full dark:block"
                     width={140}
