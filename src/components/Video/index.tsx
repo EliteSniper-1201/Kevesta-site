@@ -10,11 +10,11 @@ const Video = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <section className="relative z-10 py-16 md:py-20 lg:py-28">
+    <section className="relative z-10 py-16 md:py-20 lg:py-28" id="ready">
       <div className="container">
         <SectionTitle
           title="We are ready to help"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="The diversity and strength of our workforce are fundamental to our success defining and enabling the digital future. People are our greatest asset, and we strive to attract and retain the very best talent the industry has to offer."
           center
           mb="80px"
         />

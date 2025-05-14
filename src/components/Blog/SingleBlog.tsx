@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
-  const { title, image, paragraph, author, tags, publishDate } = blog;
+  const { title, image, paragraph, tags, stack } = blog;
   return (
     <>
       <div className="group relative overflow-hidden rounded-sm bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark">
@@ -29,7 +29,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
             {paragraph}
           </p>
           <div className="flex items-center">
-            <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
+            {/* <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
               <div className="mr-4">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full">
                   <Image src={author.image} alt="author" fill />
@@ -47,7 +47,8 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
                 Date
               </h4>
               <p className="text-xs text-body-color">{publishDate}</p>
-            </div>
+            </div> */}
+            <p className="text-xs text-body-color">{stack}</p>
           </div>
         </div>
       </div>

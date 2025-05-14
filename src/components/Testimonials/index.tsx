@@ -1,50 +1,60 @@
 import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
+import TeamMemberCard from "./TeamMemberCard";
 
-const testimonialData: Testimonial[] = [
+interface TeamMember {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  skills: string[];
+}
+
+const teamMembers: TeamMember[] = [
   {
-    id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-01.png",
-    star: 5,
+    name: "Uprety Sunil",
+    role: "Lead Software Engineer",
+    bio: "10+ years of experience in full-stack development",
+    image: "/images/hero/Uprety.png",
+    skills: ["React", "Node.js", "TypeScript", "AWS"]
   },
   {
-    id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-02.png",
-    star: 5,
+    name: "Juri Miyazawa",
+    role: "Senior Full Stack Developer",
+    bio: "7+ years of experience in full-stack development",
+    image: "/images/hero/Juri.jpg",
+    skills: ["React", "Node.js", "TypeScript", "AWS"]
   },
   {
-    id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-03.png",
-    star: 5,
+    name: "Laurent",
+    role: "Senior Full Stack Engineer",
+    bio: "10+ years of experience in full-stack development",
+    image: "/images/hero/Lucky.png",
+    skills: ["React", "Node.js", "TypeScript", "AWS"]
+  },
+  {
+    name: "Everistus",
+    role: "Senior Front End Developer",
+    bio: "10+ years of experience in full-stack development",
+    image: "/images/hero/Everistus.jpg",
+    skills: ["React", "Node.js", "TypeScript", "AWS"]
   },
 ];
 
 const Testimonials = () => {
   return (
-    <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
+    <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28" id="team">
       <div className="container">
         <SectionTitle
-          title="Our founders"
-          paragraph="Meet our founders."
+          title="Our members"
+          paragraph="Meet our members."
           center
         />
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
+          {teamMembers.map((member, index) => (
+            <TeamMemberCard key={index} member={member} />
           ))}
         </div>
       </div>
